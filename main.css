@@ -1,0 +1,97 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  min-height: 1800px;
+  background: linear-gradient(to bottom, #dddddd 40%, #30475e 40%);
+  font-family: 'Heebo', sans-serif;
+}
+
+.wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  width: 90%;
+  max-width: 1000px
+}
+
+.header {
+  text-align: center;
+  font-size: 3em;
+  margin: 50px;
+  color: white;
+  font-weight: 600;
+}
+
+.photo {
+  display: block;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.picture {
+  grid-area: picture;
+  padding: 5%;
+}
+
+.goals {
+  grid-area: goals;
+  padding: 5%;
+}
+
+.how {
+  grid-area: how;
+  padding: 5%;
+}
+
+.why {
+  grid-area: why;
+  padding: 5%;
+}
+
+.bgr {
+  grid-area: bgr;
+  padding: 5%;
+}
+
+.education {
+  grid-area: education;
+  padding: 5%;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+}
+
+.content {
+  background-color: white;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "picture"
+    "goals"
+    "how"
+    "why"
+    "bgr"
+    "education"
+  ;
+}
+
+@media screen and (min-width: 400px)  {
+  .content {
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+      "picture goals"
+      "how why"
+      "bgr education";
+  }
+}
